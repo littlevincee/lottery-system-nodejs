@@ -1,0 +1,40 @@
+POST http://localhost:9001/api/v1/category HTTP/1.1
+Content-Type: application/json
+
+{
+  "category": "cash_coupon",
+  "description": "cash coupon",
+  "key": "cc"
+}
+
+####
+
+POST http://localhost:9001/api/v1/prize HTTP/1.1
+Content-Type: application/json
+
+{
+  "description": "$5 Cash Coupon",
+  "key": "5-hkd-cash-coupon",
+  "category": "cash_coupon",
+  "has_quota": true,
+  "total_quota": 500,
+  "daily_quota": 100,
+  "probability": 0.5
+}
+
+###
+PATCH http://localhost:9001/api/v1/prize/d86030c6-3d63-419b-a7d1-8e42f0216e7b HTTP/1.1
+Content-Type: application/json
+
+{
+  "probability": 1
+}
+
+###
+
+POST http://localhost:9001/api/v1/lottery/draw HTTP/1.1
+Content-Type: application/json
+
+{
+  "mobile_number": "+85262102632"
+}
