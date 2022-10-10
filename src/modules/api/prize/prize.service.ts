@@ -4,8 +4,8 @@ import {
   BadRequestException,
   BadGatewayException,
 } from '@nestjs/common';
-import { CategoryEntity } from 'src/database/entities/category.entity';
-import { PrizeEntity } from 'src/database/entities/prize.entity';
+import { CategoryEntity } from '../../../database/entities/category.entity';
+import { PrizeEntity } from '../../../database/entities/prize.entity';
 import { Repository } from 'typeorm';
 import { CreatePrizeRequestDto } from './dto/request/create-prize.request.dto';
 import { UpdatePrizeProbabilityRequestDto } from './dto/request/update-prize-probability.request.dto';

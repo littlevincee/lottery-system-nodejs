@@ -1,4 +1,4 @@
-import { ParticipatedCustomerEntity } from 'src/database/entities/participated-customer.entity';
+import { ParticipatedCustomerEntity } from '../../../database/entities/participated-customer.entity';
 import { DataSource } from 'typeorm';
 
 export const participatedCustomerProvider = {

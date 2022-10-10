@@ -1,7 +1,7 @@
 import { BadGatewayException, Inject, Injectable } from '@nestjs/common';
 import { randomUUID } from 'crypto';
-import { ParticipatedCustomerEntity } from 'src/database/entities/participated-customer.entity';
-import { PrizeEntity } from 'src/database/entities/prize.entity';
+import { ParticipatedCustomerEntity } from '../../../database/entities/participated-customer.entity';
+import { PrizeEntity } from '../../../database/entities/prize.entity';
 import { Repository } from 'typeorm';
 import { CreateParticipatedCustomerRequestDto } from './dto/request/create-participated-customer.request.dto';
 import { RedeemPrizeRequestDto } from './dto/request/redeem-prize.request.dto';
@@ -40,6 +40,8 @@ export class LotteryDrawService {
 
     if (findParticipatedCustomer) {
       // send notification e.g. sms to remind customer to join tomorrow
+
+      return 'You have already participated today. Come back and join tomorrow';
     } else {
       const max = Math.max(...this.prizeList.map((p) => p.probability));
       const rnd = Math.random() * max;

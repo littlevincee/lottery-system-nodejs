@@ -3,7 +3,7 @@ import { HttpModule } from '@nestjs/axios';
 import { PrizeController } from './prize.controller';
 import { PrizeService } from './prize.service';
 import { prizeProvider } from './prize.provider';
-import { DatabaseModule } from 'src/database/database.module';
+import { DatabaseModule } from '../../../database/database.module';
 import { categoryProvider } from '../category/category.provider';
 
 @Module({

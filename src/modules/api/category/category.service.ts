@@ -1,5 +1,5 @@
 import { BadGatewayException, Inject, Injectable } from '@nestjs/common';
-import { CategoryEntity } from 'src/database/entities/category.entity';
+import { CategoryEntity } from '../../../database/entities/category.entity';
 import { Repository } from 'typeorm';
 import { CreateCategoryRequestDto } from './dto/request/create-category.request.dto';
 
